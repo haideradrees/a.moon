@@ -2,6 +2,22 @@
 $('#owl-slider-one').owlCarousel({
     loop: true,
     margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    slideTransition: 'linear',
+    autoplaySpeed: 1000,
+    responsive: {
+        0: {
+            items: 1
+        },
+    }
+});
+// owl-carousel
+$('#owl-slider-two').owlCarousel({
+    loop: true,
+    margin: 10,
     nav: true,
     dots: true,
     autoplay: true,
@@ -24,7 +40,6 @@ $('#owl-slider-one').owlCarousel({
     }
 });
 // owl-carousel
-
 
 // Header Active
 $(window).scroll(function () {

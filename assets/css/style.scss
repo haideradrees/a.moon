@@ -120,7 +120,6 @@ html {
     background: $primary;
 }
 
-
 .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
@@ -132,5 +131,170 @@ html {
 
     100% {
         transform: translateY(-10px);
+    }
+}
+
+.btn-light-rounded {
+    width: 100% !important;
+    max-width: 318px !important;
+    height: 42px !important;
+    background: #FFFFFF !important;
+    border-radius: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: none !important;
+    font-family: 'work Sans' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    letter-spacing: 0.05em !important;
+    color: #876235 !important;
+}
+
+.btn-light-rounded:hover {
+    color: #fff !important;
+    background: $primary !important;
+}
+
+.hero-section {
+    background: #F2F0ED;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-right: 6px;
+    overflow: hidden;
+
+    .hero-body {
+        max-width: 1280px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+
+        .side-content {
+            width: 100%;
+            max-width: 452px;
+            background: #ccc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .inner-content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                z-index: 999;
+
+                .logo {
+                    height: 178px;
+                    margin-bottom: 12px;
+                }
+
+                h6 {
+                    color: $primary;
+                    font-size: 16px;
+                    font-family: 'Sweet Sans Pro';
+                    margin-bottom: 0px;
+                    letter-spacing: -2px;
+                    font-weight: 500;
+                }
+
+                h3 {
+                    color: $primary;
+                    font-size: 22px;
+                    font-family: 'Sweet Sans Pro';
+                    margin-bottom: 45px;
+                    letter-spacing: -2px;
+                    font-weight: 500;
+                }
+            }
+
+            .slider-section {
+                width: 100%;
+                max-width: 284px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 999;
+
+                h4 {
+                    font-family: 'work Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 180%;
+                    text-align: center;
+                    letter-spacing: 0.1em;
+                    color: #876235;
+                    margin-bottom: 15px;
+                }
+
+                #owl-slider-one {
+                    .item {
+                        width: 100%;
+                        height: 392px;
+                        overflow: hidden;
+                        border-radius: 10px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .owl-dots {
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 6px;
+                    }
+
+                    .owl-dot span {
+                        height: 8px;
+                        width: 8px;
+                        background-color: #ABABAB;
+                        border-radius: 100%;
+                        margin: 0px;
+                        transition: background 0.3s;
+                    }
+
+                    .owl-dot.active span {
+                        background-color: #BDB15D;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .main-frame {
+            width: 100%;
+            background: gray;
+            width: 375px;
+            margin: 0px auto;
+            height: 6000px;
+        }
     }
 }
