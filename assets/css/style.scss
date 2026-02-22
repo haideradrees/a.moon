@@ -162,6 +162,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 0;
   padding-right: 6px;
   overflow: hidden;
 
@@ -175,7 +176,7 @@ html {
       width: 100%;
       max-width: 452px;
       background: #f2f0ed;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -203,7 +204,7 @@ html {
         justify-content: center;
         align-items: center;
         position: relative;
-        z-index: 999;
+        z-index: 3;
 
         h4 {
           font-family: "work Sans";
@@ -256,27 +257,24 @@ html {
       }
     }
   }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    .main-frame {
-      width: 100%;
-      width: 375px;
-      margin: 0px auto;
-      height: 6000px;
-      background: #fff;
-      overflow: hidden;
-    }
+  .main-frame {
+    padding-bottom: 200px;
+    width: 100%;
+    max-width: 375px;
+    margin: 0px auto;
+    overflow: hidden;
+    background: #f2f0ed;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
   }
 }
 
@@ -286,6 +284,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
   .logo {
     height: 43px;
   }
@@ -357,10 +356,6 @@ html {
     text-align: center;
     color: #876235;
   }
-}
-
-.bg-pink {
-  background: #f2f0ed;
 }
 .home-collection-head {
   width: 100%;
@@ -675,7 +670,7 @@ html {
   }
 }
 
-.collections {
+.collections2 {
   padding: 30px 10px 60px;
   .atsuki-kun {
     width: 100%;
@@ -711,22 +706,106 @@ html {
       }
     }
     .d1 {
-        position: absolute;
-        top: 205px;
-        left: 10px;
-        z-index: 9;
+      position: absolute;
+      top: 205px;
+      left: 10px;
+      z-index: 9;
     }
     .d2 {
-        position: absolute;
-        top: 140px;
-        right: 0px;
-        z-index: 9;
+      position: absolute;
+      top: 140px;
+      right: 0px;
+      z-index: 9;
     }
     .d3 {
-        position: absolute;
-        bottom: 40px;
-        right: 10px;
-        z-index: 9;
+      position: absolute;
+      bottom: 40px;
+      right: 10px;
+      z-index: 9;
+    }
+  }
+}
+
+.all-item {
+  padding: 20px 0px;
+  h3 {
+    padding: 0px 12px;
+    font-family: "work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    color: #876235;
+  }
+  .item-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    .banner {
+      width: 100%;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: "work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 180%;
+      text-align: center;
+      color: #876235;
+      img {
+        width: 22px;
+      }
+    }
+  }
+  #owl-slider-two {
+    .owl-dots {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .owl-dot span {
+      height: 8px;
+      width: 8px;
+      background-color: #ababab;
+      border-radius: 100%;
+      margin: 0px;
+      transition: background 0.3s;
+    }
+
+    .owl-dot.active span {
+      background-image: url("../images/moon_pagenation.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .owl-nav-custom {
+    width: 100%;
+    padding: 0px 29px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      margin-top: -20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 9;
     }
   }
 }
