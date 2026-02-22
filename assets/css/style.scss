@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
 $primary: #876235;
 $card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -141,7 +141,7 @@ html {
   justify-content: center !important;
   align-items: center !important;
   border: none !important;
-  font-family: "work Sans" !important;
+  font-family: "Work Sans" !important;
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 14px !important;
@@ -171,7 +171,6 @@ html {
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
-
     .side-content {
       width: 100%;
       max-width: 452px;
@@ -207,7 +206,7 @@ html {
         z-index: 3;
 
         h4 {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-style: normal;
           font-weight: 500;
           font-size: 15px;
@@ -267,14 +266,13 @@ html {
   z-index: 2;
 
   .main-frame {
-    padding-bottom: 200px;
     width: 100%;
     max-width: 375px;
     margin: 0px auto;
     overflow: hidden;
     background: #f2f0ed;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    position: relative;
+    box-shadow: $card-shadow;
   }
 }
 
@@ -348,7 +346,7 @@ html {
     display: flex;
     align-items: center;
     gap: 7px;
-    font-family: "work Sans";
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -369,7 +367,7 @@ html {
   justify-content: center;
   padding: 10px;
   span {
-    font-family: "work Sans";
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -466,7 +464,7 @@ html {
       margin-bottom: 0px;
       color: #876235;
       span {
-        font-family: "work Sans";
+        font-family: "Work Sans";
         font-style: normal;
         font-size: 8px;
         letter-spacing: 0px;
@@ -563,7 +561,7 @@ html {
         display: flex;
         flex-direction: column;
         b {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-style: normal;
           font-weight: 500;
           font-size: 11px;
@@ -572,7 +570,7 @@ html {
           color: #876235;
         }
         span {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-size: 11px;
           line-height: 13px;
           color: #876235;
@@ -651,7 +649,7 @@ html {
         display: flex;
         flex-direction: column;
         b {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-style: normal;
           font-weight: 500;
           font-size: 11px;
@@ -660,7 +658,7 @@ html {
           color: #876235;
         }
         span {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-size: 11px;
           line-height: 13px;
           color: #876235;
@@ -689,7 +687,7 @@ html {
         display: flex;
         flex-direction: column;
         b {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-style: normal;
           font-weight: 500;
           font-size: 11px;
@@ -698,7 +696,7 @@ html {
           color: #876235;
         }
         span {
-          font-family: "work Sans";
+          font-family: "Work Sans";
           font-size: 11px;
           line-height: 13px;
           color: #876235;
@@ -727,15 +725,14 @@ html {
 }
 
 .all-item {
-  padding: 20px 0px;
+  padding: 20px 0px 100px;
   h3 {
     padding: 0px 12px;
-    font-family: "work Sans";
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 33px;
-    letter-spacing: 0.1em;
     color: #876235;
   }
   .item-card {
@@ -760,7 +757,7 @@ html {
       display: flex;
       align-items: center;
       gap: 5px;
-      font-family: "work Sans";
+      font-family: "Work Sans";
       font-style: normal;
       font-weight: 500;
       font-size: 12px;
@@ -772,40 +769,1098 @@ html {
       }
     }
   }
-  #owl-slider-two {
-    .owl-dots {
-      margin-top: 25px;
+  .slider-wrapper {
+    #owl-slider-two {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background-image: url("../images/moon_pagenation.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
       display: flex;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .owl-dot span {
-      height: 8px;
-      width: 8px;
-      background-color: #ababab;
-      border-radius: 100%;
-      margin: 0px;
-      transition: background 0.3s;
-    }
-
-    .owl-dot.active span {
-      background-image: url("../images/moon_pagenation.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
     }
   }
-  .owl-nav-custom {
-    width: 100%;
-    padding: 0px 29px;
+}
+
+.pre-order-benefits {
+  background-image: url(../images/amoon_home_moon.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  padding: 75px 0px 90px;
+  .heading-section {
+    padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h6 {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px;
+      text-align: center;
+      color: #876235;
+      margin-bottom: 3px;
+    }
+    h2 {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 37px;
+      letter-spacing: -2px;
+      line-height: 100%;
+      text-align: center;
+      color: #876235;
+      margin-bottom: 6px;
+    }
+    h4 {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: -2px;
+      line-height: 100%;
+      text-align: center;
+      color: #876235;
+      margin-bottom: 14px;
+    }
+
+    .timer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      h3 {
+        font-family: "Noto Sans JP";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+        color: #876235;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        span {
+          font-family: "Noto Sans JP";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10.4031px;
+          text-align: center;
+          color: #876235;
+          transform: rotate(90deg);
+        }
+        sub {
+          font-family: "Noto Sans JP";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10.4031px;
+          line-height: 12px;
+          text-align: center;
+          color: #876235;
+        }
+      }
+    }
+    p {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 21px;
+      text-align: center;
+      color: #876235;
+      margin-bottom: 0px;
+    }
+  }
+  .slider-wrapper {
+    margin-top: 45px;
+    #owl-slider-3 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background: #ab6e6e;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+  .benefits-card {
+    width: 100%;
+    height: 350px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 30px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .heading {
+      width: 100%;
+      height: 42px;
+      background: #cedbe1;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 100%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #876235;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 152%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #876235;
+      margin-bottom: 12px;
+    }
+    .banner {
+      width: 111px;
+      height: 144px;
+      margin-bottom: 12px;
+      background: #d9d9d9;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    p {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 152%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #876235;
+      margin-bottom: 0px;
+    }
+  }
+  .slider-wrapper {
+    margin-top: 45px;
+    #owl-slider-4 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background: #ab6e6e;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+
+  .limited-set-card {
+    width: 100%;
+    height: 550px;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .banner {
+      width: 100%;
+      height: 252px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .details {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h4 {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #876235;
+      }
+      p {
+        font-family: "Zen Kaku Gothic New";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -1px;
+        text-align: center;
+        color: #2a2a2a;
+        margin-bottom: 14px;
+      }
+      .set-cards-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 5px;
+        margin-bottom: 30px;
+        .set-card {
+          width: 25%;
+          height: 82.33px;
+          background: #ffffff;
+          opacity: 0.8;
+          box-shadow: 0px 1.17621px 7.05727px rgba(0, 0, 0, 0.25);
+          border-radius: 2.35242px;
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          .image {
+            width: 29.41px;
+            height: 36.46px;
+            background: #d9d9d9;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          span {
+            font-family: "Zen Kaku Gothic New";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 10.5859px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: -0.1em;
+            color: #2a2a2a;
+          }
+        }
+      }
+    }
+  }
+}
+
+.price-btn {
+  width: 100%;
+  height: 50px;
+  background: #ab6e6e;
+  border-radius: 55px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    margin-bottom: 0px;
+    small {
+      font-size: 10px;
+    }
+  }
+  i {
+    color: #fff;
+  }
+}
+
+.price-btn:hover {
+  background: #ebd7aa;
+  span,
+  small,
+  i {
+    color: $primary;
+  }
+}
+
+.room-wear {
+  padding: 100px 0px 90px;
+}
+
+.room-wear {
+  padding: 100px 0px 90px;
+  position: relative;
+  .parker {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    width: 68px;
+  }
+  h3 {
+    padding: 0px 12px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    color: #876235;
+  }
+  .item-card {
+    width: 100%;
+    gap: 8px;
+    .banner {
+      width: 100%;
+      height: 310px;
+      border-radius: 8px 8px 0px 0px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .details {
+      padding: 9px;
+      h4 {
+        margin-bottom: 0px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        color: #876235;
+      }
+      h5 {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 180%;
+        color: #876235;
+        small {
+          font-size: 11px;
+        }
+      }
+      h6 {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 180%;
+        text-align: center;
+        color: #876235;
+        span {
+          width: 16px;
+          height: 16px;
+          border-radius: 100px;
+        }
+      }
+      p {
+        font-family: "Noto Sans JP";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 21px;
+        color: #876235;
+        margin-bottom: 12px;
+      }
+      .btn-primary {
+        width: 100%;
+        height: 29px;
+        background: #ab6e6e;
+        border-radius: 40px;
+        padding: 5px 16px;
+        display: flex;
+        align-items: center;
+        border: none;
+        outline: none;
+        gap: 32px;
+        span {
+          font-family: "Zen Kaku Gothic New";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 21px;
+          color: #ffffff;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+  .slider-wrapper {
+    #owl-slider-5 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background-image: url("../images/moon_pagenation.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+}
+.home-goods {
+  padding: 100px 0px 90px;
+  background: #cedbe1;
+  position: relative;
+  .parker {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    width: 68px;
+  }
+  h3 {
+    padding: 0px 12px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    color: #876235;
+  }
+  .item-card {
+    width: 100%;
+    gap: 8px;
+    .banner {
+      width: 100%;
+      height: 310px;
+      border-radius: 8px 8px 0px 0px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .details {
+      padding: 9px;
+      h4 {
+        margin-bottom: 0px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        color: #876235;
+      }
+      h5 {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 180%;
+        color: #876235;
+        small {
+          font-size: 11px;
+        }
+      }
+      h6 {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 180%;
+        text-align: center;
+        color: #876235;
+        span {
+          width: 16px;
+          height: 16px;
+          border-radius: 100px;
+        }
+      }
+      p {
+        font-family: "Noto Sans JP";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 21px;
+        color: #876235;
+        margin-bottom: 0px;
+      }
+      u {
+        font-family: "Noto Sans JP";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 21px;
+        color: #876235;
+        margin-bottom: 12px;
+      }
+      .btn-primary {
+        width: 100%;
+        height: 29px;
+        background: #ab6e6e;
+        border-radius: 40px;
+        padding: 5px 16px;
+        display: flex;
+        align-items: center;
+        border: none;
+        outline: none;
+        gap: 32px;
+        span {
+          font-family: "Zen Kaku Gothic New";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 21px;
+          color: #ffffff;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+  .slider-wrapper {
+    #owl-slider-6 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background-image: url("../images/moon_pagenation.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+}
+
+.message-section {
+  padding: 90px 30px 90px;
+  h3 {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    color: #876235;
+  }
+  .video-card {
+    position: relative;
+    width: 100%;
+    height: 317px;
+    background: #c7d0d2;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 100%;
+      text-align: center;
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 180%;
+      text-align: center;
+      color: #876235;
+      margin-bottom: 20px;
+    }
+    .btn-view-more {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 10px;
+      gap: 10px;
+      width: 116px;
+      height: 36px;
+      background: #ffffff;
+      border-radius: 30px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.05em;
+      color: #876235;
+    }
+  }
+}
+
+.category-section {
+  padding: 0px 30px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4 {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #876235;
+    margin-bottom: 20px;
+  }
+
+  .badge {
+    width: 100%;
+    height: 37px;
+    background: #ffffff;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 12px;
+    cursor: pointer;
     span {
-      margin-top: -20px;
-      cursor: pointer;
-      position: relative;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      color: #876235;
+    }
+    small {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 18px;
+      text-align: center;
+      color: #876235;
+    }
+  }
+  .badge.active,
+  .badge:hover {
+    background: #cedbe1;
+  }
+  .line {
+    margin-top: 70px;
+  }
+}
+
+.coordinate {
+  padding: 0px 0px 90px;
+  position: relative;
+  h3 {
+    padding: 0px 12px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    color: #876235;
+  }
+  .item-card {
+    width: 100%;
+    gap: 8px;
+    background: #fff;
+    .banner {
+      width: 100%;
+      height: 310px;
+      border-radius: 0px 0px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .details {
+      padding: 13px;
+
+      h6 {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 18px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 0px;
+        font-size: 12px;
+        text-align: center;
+        color: #876235;
+        img {
+          width: 22px;
+        }
+      }
+      small {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10.35px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        color: #876235;
+      }
+    }
+  }
+  .slider-wrapper {
+    #owl-slider-7 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background-image: url("../images/moon_pagenation.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+}
+.collection {
+  padding: 0px 0px 90px;
+  position: relative;
+  .item-card {
+    width: 100%;
+    gap: 8px;
+    background: #fff;
+    .banner {
+      width: 100%;
+      height: 320px;
+      border-radius: 0px 0px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .slider-wrapper {
+    #owl-slider-8 {
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background-image: url("../images/moon_pagenation.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background: #cedbe1;
+  padding: 55px 80px 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    height: 196px;
+    margin-bottom: 32px;
+  }
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    img {
+      height: 26px;
+    }
+  }
+  .search {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      border-radius: 0px;
+      border: none;
+      border-bottom: 1px solid #876235;
+      background: transparent;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12.1px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #876235;
+    }
+    input::placeholder {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12.1px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #876235;
+    }
+    .icon {
+      position: absolute;
+      top: 8px;
+      right: 6px;
       z-index: 9;
     }
+  }
+  .nav-link {
+    margin-bottom: 6px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #876235;
+  }
+  p {
+    font-family: "Zen Kaku Gothic New";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #876235;
+    margin-bottom: 32px;
+  }
+  span {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    color: #876235;
+  }
+}
+.top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 16px;
+  right: 18px;
+  z-index: 999;
+  background: #c0bfbf;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* TOP */
+  p {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #876235;
+    margin-bottom: 0px;
   }
 }
