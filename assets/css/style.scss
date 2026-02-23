@@ -556,6 +556,7 @@ html {
       position: relative;
       z-index: 3;
       padding-left: 20px;
+      width: fit-content;
       .arrow {
         width: 24px;
       }
@@ -906,45 +907,10 @@ html {
       margin-bottom: 0px;
     }
   }
-  .slider-wrapper {
-    margin-top: 45px;
-    #owl-slider-3 {
-      .owl-dots {
-        margin-top: 25px;
-        display: flex;
-        justify-content: center;
-        gap: 6px;
-      }
 
-      .owl-dot span {
-        height: 8px;
-        width: 8px;
-        background-color: #ababab;
-        border-radius: 100%;
-        margin: 0px;
-        transition: background 0.3s;
-      }
-
-      .owl-dot.active span {
-        background: #ab6e6e;
-      }
-    }
-    .owl-nav-custom {
-      width: 100%;
-      padding: 0px 30px;
-      display: flex;
-      justify-content: space-between;
-      span {
-        margin-top: -20px;
-        cursor: pointer;
-        position: relative;
-        z-index: 9;
-      }
-    }
-  }
   .benefits-card {
     width: 100%;
-    height: 350px;
+    height: 320px;
     border-radius: 4px;
     background: #fff;
     padding: 30px 32px 32px;
@@ -1007,6 +973,52 @@ html {
   }
   .slider-wrapper {
     margin-top: 45px;
+    #owl-slider-3 {
+      .owl-item {
+        height: 350px;
+        padding: 15px 0px;
+      }
+      .owl-item.active.center {
+        .benefits-card {
+          height: 350px;
+          margin-top: -15px;
+        }
+      }
+      .owl-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .owl-dot span {
+        height: 8px;
+        width: 8px;
+        background-color: #ababab;
+        border-radius: 100%;
+        margin: 0px;
+        transition: background 0.3s;
+      }
+
+      .owl-dot.active span {
+        background: #ab6e6e;
+      }
+    }
+    .owl-nav-custom {
+      width: 100%;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        margin-top: -20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+  .slider-wrapper {
+    margin-top: 45px;
     #owl-slider-4 {
       .owl-dots {
         margin-top: 25px;
@@ -1054,6 +1066,50 @@ html {
     .banner {
       width: 100%;
       height: 252px;
+      position: relative;
+      .items {
+        position: absolute;
+        width: 59px;
+        top: 10px;
+        right: 10px;
+        background: #fff;
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        padding: 1px;
+        z-index: 9;
+        .tag {
+          height: 20px;
+          background: #cedbe0;
+          width: 100%;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 500;
+          border-radius: 2px 2px 0px 0px;
+          font-size: 10px;
+          line-height: 13px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: #876235;
+        }
+        .tag2 {
+          height: 20px;
+          background: #fff;
+          width: 100%;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 500;
+          border-radius: 2px 2px 0px 0px;
+          font-size: 10px;
+          line-height: 13px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: #876235;
+        }
+      }
       img {
         width: 100%;
         height: 100%;
@@ -1552,10 +1608,19 @@ html {
       }
     }
   }
-  .content-section .hide {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease;
+  .content-section {
+    .atukikun {
+      position: absolute;
+      bottom: 60px;
+      left: 30px;
+      width: 80px;
+    }
+    .hide {
+      height: 0;
+      position: relative;
+      overflow: hidden;
+      transition: height 0.5s ease;
+    }
   }
 }
 
