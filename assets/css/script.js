@@ -230,3 +230,34 @@ $("#owl-slider-8").each(function () {
     $slider.trigger("prev.owl.carousel");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".btn-view-more");
+  const content = document.querySelector(".hide");
+
+  let isOpen = false;
+
+  btn.addEventListener("click", function () {
+    if (!isOpen) {
+      // OPEN
+      content.style.height = content.scrollHeight + "px";
+      btn.textContent = "CLOSE";
+    } else {
+      // CLOSE
+      content.style.height = content.scrollHeight + "px"; // set current height
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+      btn.textContent = "VIEW MORE";
+    }
+
+    isOpen = !isOpen;
+  });
+
+  // Reset height after animation (important)
+  content.addEventListener("transitionend", () => {
+    if (isOpen) {
+      content.style.height = "auto";
+    }
+  });
+});

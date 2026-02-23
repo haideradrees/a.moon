@@ -105,8 +105,8 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -114,7 +114,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $primary;
+  background: #8c8c8c;
 }
 
 .animated {
@@ -163,7 +163,7 @@ html {
   right: 0;
   bottom: 0;
   z-index: 0;
-  padding-right: 6px;
+  padding-right: 3px;
   overflow: hidden;
 
   .hero-body {
@@ -343,6 +343,8 @@ html {
   justify-content: center;
   align-items: center;
   span {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out !important;
     display: flex;
     align-items: center;
     gap: 7px;
@@ -1538,6 +1540,22 @@ html {
       letter-spacing: 0.05em;
       color: #876235;
     }
+    .options {
+      margin-bottom: 65px;
+      h3 {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 100%;
+        color: #876235;
+      }
+    }
+  }
+  .content-section .hide {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
   }
 }
 
@@ -1863,4 +1881,93 @@ html {
     color: #876235;
     margin-bottom: 0px;
   }
+}
+#customModal {
+  .modal-dialog .modal-content {
+    width: 375px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px; /* optional but recommended */
+  }
+  .custom-close {
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    z-index: 10;
+  }
+  .modal-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 89px 25px;
+    p {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 220%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #876235;
+      margin-bottom: 0px;
+    }
+  }
+  .custom-close {
+    padding: 0px;
+  }
+}
+#customModal2 {
+  .modal-dialog .modal-content {
+    width: 375px;
+    padding: 54px 25px;
+    margin: auto;
+    background: #cedbe1;
+    border-radius: 0px; /* optional but recommended */
+  }
+  .custom-close {
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    z-index: 10;
+  }
+  .modal-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 447px;
+    overflow-y: scroll;
+    .banner {
+      width: 100%;
+      height: 185px;
+      margin-bottom: 22px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    p {
+      font-family: "Zen Kaku Gothic New";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 220%;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #876235;
+      margin-bottom: 0px;
+    }
+  }
+  .custom-close {
+    padding: 0px;
+  }
+}
+
+.pop-up-section span:hover {
+  transform: scale(1.05);
 }
