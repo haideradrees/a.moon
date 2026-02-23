@@ -123,11 +123,11 @@ html {
 
 @keyframes up-down {
   0% {
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
 
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
@@ -309,10 +309,18 @@ html {
   padding: 5px;
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1));
   display: flex;
-  justify-content: center; /* Rectangle 79 */
+  justify-content: center;
+  align-items: center;
   background: #ebd7aa;
 
-  align-items: center;
+  position: sticky; /* stays at top until hidden */
+  top: 0;
+  z-index: 999;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+
   span {
     font-family: "Zen Kaku Gothic New";
     font-style: normal;
@@ -325,6 +333,11 @@ html {
   }
 }
 
+/* hidden state */
+.top-bar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 .main-banner {
   width: 100%;
   height: 600px;
@@ -1609,11 +1622,27 @@ html {
     }
   }
   .content-section {
+    position: relative;
+
     .atukikun {
       position: absolute;
-      bottom: 60px;
-      left: 30px;
+      bottom: -30px;
+      left: 10px;
       width: 80px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    &.show-atukikun {
+      .atukikun {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
     }
     .hide {
       height: 0;
@@ -1701,6 +1730,23 @@ html {
       height: 310px;
       border-radius: 0px 0px;
       overflow: hidden;
+      position: relative;
+      .plus1 {
+        position: absolute;
+        top: 74px;
+        right: 84px;
+        z-index: 9;
+        height: 28px;
+        width: 28px;
+      }
+      .plus2 {
+        position: absolute;
+        bottom: 63px;
+        left: 82px;
+        z-index: 9;
+        height: 28px;
+        width: 28px;
+      }
       img {
         height: 100%;
         width: 100%;
@@ -2035,4 +2081,26 @@ html {
 
 .pop-up-section span:hover {
   transform: scale(1.05);
+}
+
+.sm-sticky {
+  width: 100%;
+}
+
+.top {
+  display: inline-flex;
+  animation: zoomPulse 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes zoomPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -231,9 +231,11 @@ $("#owl-slider-8").each(function () {
   });
 });
 
+// SECTION COLLAPSE ANIMATION
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.querySelector(".btn-view-more");
   const content = document.querySelector(".hide");
+  const contentSection = document.querySelector(".content-section");
 
   let isOpen = false;
 
@@ -242,22 +244,41 @@ document.addEventListener("DOMContentLoaded", function () {
       // OPEN
       content.style.height = content.scrollHeight + "px";
       btn.textContent = "CLOSE";
+
+      // show atukikun
+      contentSection.classList.add("show-atukikun");
     } else {
       // CLOSE
-      content.style.height = content.scrollHeight + "px"; // set current height
+      content.style.height = content.scrollHeight + "px";
       requestAnimationFrame(() => {
         content.style.height = "0px";
       });
+
       btn.textContent = "VIEW MORE";
+
+      // hide atukikun
+      contentSection.classList.remove("show-atukikun");
     }
 
     isOpen = !isOpen;
   });
 
-  // Reset height after animation (important)
   content.addEventListener("transitionend", () => {
     if (isOpen) {
       content.style.height = "auto";
+    }
+  });
+});
+
+// TOP BAR HIDE ANIMATION
+document.addEventListener("DOMContentLoaded", function () {
+  const topBar = document.querySelector(".top-bar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      topBar.classList.add("hide");
+    } else {
+      topBar.classList.remove("hide");
     }
   });
 });
