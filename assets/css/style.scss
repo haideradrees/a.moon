@@ -267,6 +267,7 @@ html {
 
   .main-frame {
     width: 100%;
+    padding-top: 100px;
     max-width: 375px;
     margin: 0px auto;
     overflow: hidden;
@@ -277,6 +278,8 @@ html {
 }
 
 .header {
+  position: relative;
+  z-index: 99999999999;
   padding: 8px 22px;
   width: 100%;
   display: flex;
@@ -2132,7 +2135,11 @@ html {
 }
 
 .sm-sticky {
+  position: fixed;
+  max-width: 375px;
   width: 100%;
+  top: 0px;
+  z-index: 999999999999;
 }
 
 .top {
@@ -2153,13 +2160,9 @@ html {
   }
 }
 
-.offcanvas-backdrop {
-  background: transparent;
-}
 .offcanvas {
   max-width: 375px;
   margin: auto;
-  top: 130px !important;
   .logo {
     height: 40px;
   }
