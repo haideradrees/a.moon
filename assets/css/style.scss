@@ -291,6 +291,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     span {
       font-family: "Sweet Sans Pro";
       font-style: normal;
@@ -2149,5 +2150,144 @@ html {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.offcanvas {
+  max-width: 375px;
+  margin: auto;
+  .logo {
+    height: 40px;
+  }
+  /* Search */
+  .search {
+    width: 260px;
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      border-radius: 0px;
+      border: none;
+      border-bottom: 1px solid #876235;
+      background: transparent;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12.1px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #876235;
+    }
+    input::placeholder {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12.1px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #876235;
+    }
+    .icon {
+      position: absolute;
+      top: 8px;
+      right: 6px;
+      z-index: 9;
+    }
+  }
+
+  /* Account */
+  .account {
+    text-align: center;
+  }
+
+  .account a {
+    color: $primary;
+    font-family: "Work Sans";
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  .account a:hover {
+    background: $primary;
+    color: #fff;
+  }
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: $primary;
+    margin: 10px 0;
+  }
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    .submenu a {
+      font-family: "Work Sans";
+      padding-left: 20px;
+    }
+  }
+  .category-toggle {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  /* Menu links */
+  .menu-section a {
+    color: $primary;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: "Work Sans";
+    display: flex;
+    align-items: center;
+  }
+  .menu-section a:hover {
+    background: $primary;
+    color: #fff;
+  }
+
+  .menu-section small {
+    display: block;
+    font-family: "Work Sans";
+    font-size: 11px;
+    opacity: 0.8;
+  }
+
+  /* Category */
+  .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  /* Social */
+  .social {
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social p {
+    margin-bottom: 15px;
+    font-family: "Work Sans";
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    margin: auto;
+    img {
+      height: 26px;
+    }
   }
 }

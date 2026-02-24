@@ -60,7 +60,11 @@
         <div class="main-frame" id="top">
           <div class="sm-sticky">
             <div class="header">
-              <a href="" class="nav-link">
+              <div
+                class="nav-link"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sideNav"
+              >
                 <svg
                   width="39"
                   height="36"
@@ -109,7 +113,7 @@
                   </defs>
                 </svg>
                 <span> MENU </span>
-              </a>
+              </div>
               <a href="" class="nav-link" data-aos="fade-up">
                 <img src="assets/images/logo.svg" class="logo" alt="" />
               </a>
@@ -2011,6 +2015,93 @@
               フレグランスの説明テキストが入ります。
               フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。フレグランスの説明テキストが入ります。
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-top vh-100" tabindex="-1" id="sideNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">
+          <img src="assets/images/logo.svg" class="logo" alt="" />
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <!-- Search -->
+        <div class="search">
+          <input type="text" placeholder="Search" />
+          <img src="assets/images/search.svg" class="icon" alt="" />
+        </div>
+
+        <!-- Account -->
+        <div class="account">
+          <a href="#">LOG IN</a>
+          <span>/</span>
+          <a href="#">LOG OUT</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Products -->
+        <div class="menu-section">
+          <a href="#">NEW ARRIVAL</a>
+          <a href="#">ALL ITEMS</a>
+          <a href="#">FRAGRANCE ITEMS</a>
+          <a href="#">LUXE ver. <small>Worn by ATSUKI MASHIKO</small></a>
+          <a href="#">LIGHT ver.</a>
+          <a href="#">GOLD COLOR</a>
+          <a href="#">SILVER COLOR</a>
+
+          <!-- CATEGORY TOGGLE -->
+          <a
+            class="category-toggle"
+            data-bs-toggle="collapse"
+            href="#categoryCollapse"
+            role="button"
+            aria-expanded="false"
+          >
+            CATEGORY
+            <span class="arrow">
+              <i class="fa fa-angle-down"></i>
+            </span>
+          </a>
+
+          <!-- COLLAPSE -->
+          <div class="collapse" id="categoryCollapse">
+            <div class="submenu">
+              <a href="#">– NECKLACE</a>
+              <a href="#">– RING</a>
+              <a href="#">– BANGLE</a>
+              <a href="#">– PIERCE</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Info -->
+        <div class="menu-section">
+          <a href="#">FAQ</a>
+          <a href="#">SHOPPING GUIDE</a>
+          <a href="#">LEGAL INFORMATION</a>
+          <a href="#">CONTACT</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Social -->
+        <div class="social">
+          <p>OFFICIAL ACCOUNT</p>
+          <div class="social-links">
+            <a href="#"><img src="assets/images/s1.png" alt="" /></a>
+            <a href="#"><img src="assets/images/s2.png" alt="" /></a>
+            <a href="#"><img src="assets/images/s3.png" alt="" /></a>
+            <a href="#"><img src="assets/images/s4.png" alt="" /></a>
           </div>
         </div>
       </div>
