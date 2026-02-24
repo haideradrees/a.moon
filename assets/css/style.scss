@@ -2153,9 +2153,13 @@ html {
   }
 }
 
+.offcanvas-backdrop {
+  background: transparent;
+}
 .offcanvas {
   max-width: 375px;
   margin: auto;
+  top: 130px !important;
   .logo {
     height: 40px;
   }
