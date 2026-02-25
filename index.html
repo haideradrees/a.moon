@@ -173,7 +173,12 @@
             </div>
           </div>
           <div class="main-banner">
-            <img src="assets/images/hero-banner.png" alt="" />
+            <iframe
+              src="https://www.youtube.com/embed/7I7FoGOjY-s?autoplay=1&rel=0&showinfo=0&showsearch=0&controls=0&loop=1&mute=1&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0&disablekb=1&enablejsapi=1&playsinline=1&playlist=7I7FoGOjY-s&widgetid=7&forigin=file%3A%2F%2F%2FC%3A%2FUsers%2FHaDi%2FDownloads%2FEvelumi_25ss%2FEvelumi_25ss%2Findex.html&aoriginsup=1&vf=6"
+              frameborder="0"
+              allow="autoplay; fullscreen; muted"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="pop-up-section">
             <span data-bs-toggle="modal" data-bs-target="#customModal"
@@ -1492,10 +1497,23 @@
           </div>
           <div class="message-section" data-aos="fade-up">
             <h3>ATSUKI’s MESSAGE</h3>
-            <div class="video-card">
-              <img src="assets/images/play.svg" class="play" alt="" />
-              <img src="assets/images/message.png" class="banner" alt="" />
+            <!-- Video Card -->
+            <div
+              class="video-card"
+              data-bs-toggle="modal"
+              data-bs-target="#videoModal"
+            >
+              <img src="assets/images/play.svg" class="play" alt="Play" />
+              <video
+    class="banner"
+    src="assets/images/Image_making_square.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
             </div>
+
             <div class="content-section">
               <p>
                 INTERVIEWのテキストが入ります。テキストが入ります。INTERVIEWのテキストが入ります。
@@ -1514,7 +1532,8 @@
                   <br /><br />
                   <div class="options">
                     <h3>ROOM WEAR</h3>
-                    <div class="video-card">
+                    <div class="video-card"  data-bs-toggle="modal"
+              data-bs-target="#videoModal">
                       <img src="assets/images/play.svg" class="play" alt="" />
                       <img
                         src="assets/images/message.png"
@@ -1525,7 +1544,8 @@
                   </div>
                   <div class="options">
                     <h3>T-SHIRTS</h3>
-                    <div class="video-card">
+                    <div class="video-card"  data-bs-toggle="modal"
+              data-bs-target="#videoModal">
                       <img src="assets/images/play.svg" class="play" alt="" />
                       <img
                         src="assets/images/message.png"
@@ -1536,7 +1556,8 @@
                   </div>
                   <div class="options">
                     <h3>SOCKS</h3>
-                    <div class="video-card">
+                    <div class="video-card"  data-bs-toggle="modal"
+              data-bs-target="#videoModal">
                       <img src="assets/images/play.svg" class="play" alt="" />
                       <img
                         src="assets/images/message.png"
@@ -2106,10 +2127,54 @@
         </div>
       </div>
     </div>
+    <!-- Bootstrap Modal -->
+   <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content position-relative">
+
+      <!-- Close Button -->
+      <button
+        type="button"
+        class="btn-close custom-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+
+      <!-- Video -->
+      <div class="ratio ratio-16x9">
+        <iframe
+          id="youtubeVideo"
+           src="https://www.youtube.com/embed/R4OgvJLz7tI?=1&mute=0&controls=1&loop=1&playlist=R4OgvJLz7tI&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&playsinline=1"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
     <script src="assets/css/jquery.min.js"></script>
     <script src="assets/css/owl.carousel.min.js"></script>
     <script src="assets/css/script.js"></script>
+
+<script>
+  
+  // modal video
+  const videoModal = document.getElementById("videoModal");
+  const iframe = document.getElementById("youtubeVideo");
+  const originalSrc = iframe.src; // save original video src
+
+  videoModal.addEventListener("hidden.bs.modal", () => {
+    // Reset src to stop video and audio
+    iframe.src = "";
+    // Optional: restore src if modal is opened again
+    setTimeout(() => {
+      iframe.src = originalSrc;
+    }, 100);
+  });
+</script>
   </body>
 </html>

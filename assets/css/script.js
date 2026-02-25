@@ -271,14 +271,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // TOP BAR HIDE ANIMATION
-document.addEventListener("DOMContentLoaded", function () {
-  const topBar = document.querySelector(".top-bar");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const topBar = document.querySelector(".top-bar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-      topBar.classList.add("hide");
-    } else {
-      topBar.classList.remove("hide");
+//   window.addEventListener("scroll", () => {
+//     if (window.scrollY > 20) {
+//       topBar.classList.add("hide");
+//     } else {
+//       topBar.classList.remove("hide");
+//     }
+//   });
+// });
+
+
+  // Set target date: March 11, 23:59 (local time)
+  const targetDate = new Date(
+    new Date().getFullYear(),
+    2,   // March (0 = Jan, 1 = Feb, 2 = March)
+    11,
+    23,
+    59,
+    0
+  ).getTime();
+
+  const countdownItems = document.querySelectorAll(".count-down p");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      countdownItems[0].childNodes[0].nodeValue = "00";
+      countdownItems[2].childNodes[0].nodeValue = "00";
+      countdownItems[4].childNodes[0].nodeValue = "00";
+      countdownItems[6].childNodes[0].nodeValue = "00";
+      return;
     }
-  });
-});
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    countdownItems[0].childNodes[0].nodeValue = String(days).padStart(2, "0");
+    countdownItems[2].childNodes[0].nodeValue = String(hours).padStart(2, "0");
+    countdownItems[4].childNodes[0].nodeValue = String(minutes).padStart(2, "0");
+    countdownItems[6].childNodes[0].nodeValue = String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
